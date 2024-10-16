@@ -1,0 +1,117 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1abc9c;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #1abc9c;
+    color: white;
+}
+
+/* Carousel Section */
+.carousel-section {
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 20px 0;
+}
+
+.carousel-item {
+    flex: 0 0 320px; /* Largeur ajustée pour les vidéos */
+    margin-right: 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item h3 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.carousel-item video, .carousel-item iframe {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.carousel-item:last-child {
+    margin-right: 0; /* Pas de marge pour le dernier élément */
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .carousel {
+        display: block; /* Mettre les éléments en colonne pour les petits écrans */
+    }
+
+    .carousel-item {
+        margin: 0 auto 20px auto;
+        width: 100%;
+    }
+}

@@ -1,0 +1,124 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', Arial, sans-serif; /* Ajout de Roboto */
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Amélioration de la lisibilité */
+}
+
+/* Header */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between; /* Sépare le logo à gauche et le menu à droite */
+    align-items: center; /* Aligne verticalement */
+    max-width: 1200px;
+    margin: 0 auto; /* Centrer la totalité du contenu du header */
+    padding: 0 20px; /* Ajout de marges latérales */
+}
+
+.logo h1 {
+    font-size: 2.5em;
+    margin: 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #1abc9c;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #333;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #1abc9c;
+    color: white;
+}
+
+/* Home Section */
+.home-intro {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajout d'une ombre */
+}
+
+.home-intro h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.home-intro p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 30px; /* Augmenté pour plus d'espace */
+}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #1abc9c;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease; /* Ajout d'une transition */
+}
+
+.btn:hover {
+    background-color: #16a085;
+    transform: scale(1.05); /* Légère augmentation de la taille au hover */
+}
+
+/* Social Media Section */
+.social-media {
+    padding: 60px 20px; /* Augmentation de la marge intérieure */
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    border-top: 3px solid #1abc9c; /* Ligne de séparation en haut du footer */
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+    .home-intro h2 {
+        font-size: 1.8em;
+    }
+    .btn {
+        padding: 8px 16px;
+    }
+}
