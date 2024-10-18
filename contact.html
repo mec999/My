@@ -24,30 +24,45 @@
             </nav>
         </div>
     </header>
+    <div class="banner-container">
+        <img src="images/image_contact.jpg" alt="Stylot avec un livre entre ouvert" class="banner-image">
+        <div class="banner-text">Contact</div>
+    </div>
 
     <section class="contact-section">
         <div class="contact-form-container">
-            <h2>Envoyez-moi un message</h2>
-            <form id="contactForm" action="#" method="post">
-                <label for="name">Nom</label>
-                <input type="text" id="name" name="name" required>
-
-                <label for="email">Adresse Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="subject">Objet</label>
-                <input type="text" id="subject" name="subject" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
-
+            <div class="title-container">
+                <h2>Envoyez-moi un message</h2>
+                <div class="underline"></div>
+            </div>
+            <form id="contactForm">
+                <div>
+                    <label for="name">Nom:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="subject">Sujet:</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
                 <button type="submit" class="btn">Envoyer</button>
+                <p id="formMessage" style="display:none; color:red;"></p>
             </form>
             <p id="formMessage" style="color: red; display: none;">Veuillez remplir tous les champs correctement.</p>
         </div>
 
         <div class="contact-info">
-            <h2>Contactez-moi</h2>
+            <div class="title-container">
+                <h2>Contactez-moi</h2>
+                <div class="underline"></div>
+            </div>
             <p>Adresse : 123 Rue Fictive, 75000 Paris</p>
             <p>Téléphone : +33 1 23 45 67 89</p>
             <p>Email : contact@midiese.com</p>
