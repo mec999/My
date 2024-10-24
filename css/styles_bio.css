@@ -5,21 +5,29 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
+    padding-top: 80px; /* Compense la hauteur du header */
 }
 
 header {
     background-color: #222;
     color: #fff;
     padding: 20px 0;
+    position: fixed; /* Rend le header fixe */
+    top: 0; /* Fixe le header en haut de la page */
+    left: 0;
+    width: 100%; /* Assure que le header occupe toute la largeur de la page */
+    z-index: 1000; /* Place le header au-dessus des autres éléments */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Ajoute une légère ombre pour créer une séparation visuelle */
 }
 
+/* Container du header */
 .header-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content: space-between; /* Sépare le logo à gauche et le menu à droite */
+    align-items: center; /* Aligne verticalement les éléments dans le header */
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: 0 auto; /* Centre le contenu du header */
+    padding: 0 20px; /* Marges latérales pour le contenu */
 }
 
 .logo h1 {
