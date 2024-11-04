@@ -25,7 +25,7 @@
         </div>
     </header>
     <div class="banner-container">
-        <img src="images/image_contact.jpg" alt="Stylot avec un livre entre-ouvert" class="banner-image">
+        <img src="images/image_contact.jpg" alt="Stylot avec un livre entre ouvert" class="banner-image">
         <div class="banner-text">Contact</div>
     </div>
 
@@ -35,7 +35,7 @@
                 <h2>Envoyez-moi un message</h2>
                 <div class="underline"></div>
             </div>
-            <form id="contactForm">
+            <form id="contactForm" action="send_mail.php" method="post">
                 <div>
                     <label for="name">Nom:</label>
                     <input type="text" id="name" name="name" required>
@@ -53,7 +53,6 @@
                     <textarea id="message" name="message" required></textarea>
                 </div>
                 <button type="submit" class="btn">Envoyer</button>
-                <p id="formMessage" style="display:none; color:red;"></p>
             </form>
             <p id="formMessage" style="color: red; display: none;">Veuillez remplir tous les champs correctement.</p>
         </div>
@@ -70,41 +69,7 @@
     </section>
 
     <footer>
-        <div class="footer-container">
-            <!-- Bloc 1: À propos -->
-            <div class="footer-block">
-                <h3>À Propos</h3>
-                <p>Antoine Sénécal est un professeur diplômé, auteur-compositeur et membre de ?, enseignant la guitare à Lille, à l'école ?? et en visio.</p>
-                <p>L’objectif pour les élèves est d’améliorer leur jeu, perfectionner leur technique et développer leur créativité.</p>
-            </div>
-    
-            <!-- Bloc 2: Licence Creative Commons -->
-            <div class="footer-block">
-                <h3>Licence</h3>
-                <p>LICENCE CC BY-NC-ND Licence Creative Commons Saturax.</p>
-                <p>Toutes les photos originales présentes sur ce site sont mises à disposition selon les termes de la Licence Creative Commons Attribution 4.0 International.</p>
-                <a href="https://creativecommons.org/">Creative Commons</a>
-            </div>
-    
-            <!-- Bloc 3: Contact -->
-            <div class="footer-block">
-                <h3>Contact</h3>
-                <p>Cours de guitare à Lille – Midièse<br>9 RUE DE LA GARE, 59110 LA MADELEIN<br>59000 - LILLE</p>
-                <p>Du lundi au samedi de ? à ?</p>
-                <p>SIRET: 917 834 798 00022<br>Email: ??</p>
-                <a href="#">Midièse Instagram</a>
-            </div>
-        </div>
-    
-        <!-- Bloc 4: Copyright -->
-        <div class="footer-bottom">
-            <p>&copy; 2024 Midièse.fr – Site par Mev</p>
-            <div class="footer-links">
-                <a href="Mention_leg.html">Mentions Légales</a>
-                <a href="plan_du_site.html">Plan du site</a>
-                <a href="contact.html">Contact</a>
-            </div>
-        </div>
+        <p>&copy; 2024 Mi Diese. Tous droits réservés.</p>
     </footer>
 
     <!-- Lien vers le fichier JavaScript externe -->

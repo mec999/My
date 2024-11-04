@@ -1,28 +1,51 @@
 document.getElementById('contactForm').addEventListener('submit', function(event) {
-    // Prevent form submission
+    // Empêche la soumission par défaut du formulaire
     event.preventDefault();
 
-    // Get form values
+    // Récupère les valeurs des champs du formulaire
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
     const subject = document.getElementById('subject').value;
     const message = document.getElementById('message').value;
     const formMessage = document.getElementById('formMessage');
 
-    // Regular expressions
-    const nameRegex = /^[A-Za-z\-]+$/; // Only letters (upper/lowercase) and dashes are allowed
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email validation: must contain "@" and a domain
+    // Expressions régulières pour validation
+    const nameRegex = /^[A-Za-z\-]+$/; // Autorise seulement les lettres et les tirets
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Valide les emails basiques
 
-    // Validation logic
+    // Validation des champs du formulaire
     if (nameRegex.test(name) && emailRegex.test(email) && subject && message) {
-        formMessage.style.display = 'none';
-        alert("Merci, votre message a été envoyé !");
-        // You can add logic here to actually send the form data (e.g., using an AJAX request)
+        formMessage.style.display = 'none'; // Cache le message d'erreur
+
+        // Envoi des données via AJAX avec fetch()
+        fetch('send_mail.php', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },
+            body: `name=${encodeURIComponent(name)}&email=${encodeURIComponent(email)}&subject=${encodeURIComponent(subject)}&message=${encodeURIComponent(message)}`
+        })
+        .then(response => response.text())
+        .then(result => {
+            // Affiche le message de confirmation ou d'erreur
+            formMessage.style.display = 'block';
+            formMessage.style.color = 'green';
+            formMessage.textContent = "Merci, votre message a été envoyé avec succès.";
+            // Réinitialise le formulaire après l'envoi
+            document.getElementById('contactForm').reset();
+        })
+        .catch(error => {
+            formMessage.style.display = 'block';
+            formMessage.style.color = 'red';
+            formMessage.textContent = "Erreur lors de l'envoi du message. Veuillez réessayer plus tard.";
+        });
     } else {
+        // Affiche un message d'erreur si la validation échoue
         formMessage.style.display = 'block';
+        formMessage.style.color = 'red';
         formMessage.textContent = "Veuillez vérifier les champs suivants :";
-        
-        // Detailed error messages
+
+        // Messages d'erreur détaillés
         if (!nameRegex.test(name)) {
             formMessage.textContent += " Nom (seulement des lettres et des tirets autorisés).";
         }
@@ -32,24 +55,5 @@ document.getElementById('contactForm').addEventListener('submit', function(event
         if (!subject || !message) {
             formMessage.textContent += " Sujet et message ne doivent pas être vides.";
         }
-    }
-});
-
-window.addEventListener('scroll', function() {
-    // Récupérer la position de défilement
-    let scrollPosition = window.scrollY;
-    
-    // Sélectionner l'image de la bannière
-    const bannerImage = document.querySelector('.banner-image');
-    // Sélectionner le texte sur l'image
-    const bannerText = document.querySelector('.banner-text');
-    
-    // Ajuster l'opacité de l'image en fonction de la position de défilement
-    if (scrollPosition <= 400) {
-        bannerImage.style.opacity = 1 - scrollPosition / 400;
-        bannerText.style.opacity = 1 - scrollPosition / 400; // Appliquer la même logique pour le texte
-    } else {
-        bannerImage.style.opacity = 0.1; // Assure que l'image disparaît complètement
-        bannerText.style.opacity = 0.1;  // Assure que le texte disparaît complètement
     }
 });
