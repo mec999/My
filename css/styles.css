@@ -10,7 +10,7 @@ body {
 }
 
 header {
-    background-color: #222;
+    background-color: #A57142;
     color: #fff;
     padding: 20px 0;
     position: fixed; /* Rend le header fixe */
@@ -26,7 +26,7 @@ header {
     display: flex;
     justify-content: space-between; /* Sépare le logo à gauche et le menu à droite */
     align-items: center; /* Aligne verticalement les éléments dans le header */
-    max-width: 1200px;
+    max-width: 1600px;
     margin: 0 auto; /* Centre le contenu du header */
     padding: 0 20px; /* Marges latérales pour le contenu */
 }
@@ -34,7 +34,12 @@ header {
 .logo h1 {
     font-size: 2.5em;
     margin: 0;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4); /* Vous pouvez garder ou ajuster cette ombre si nécessaire */
+}
+
+.logo h1 a {
+    color: #fff; /* Définit la couleur du texte en blanc */
+    text-decoration: none; /* Supprime le soulignement */
 }
 
 nav ul {
@@ -50,16 +55,16 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #1abc9c;
+    color: #A57142;
     font-weight: bold;
     padding: 10px 20px;
-    background-color: #333;
-    border-radius: 5px;
+    background-color: #fefefe;
+    border-radius: 0%;
     transition: background-color 0.3s, color 0.3s;
 }
 
 nav ul li a:hover {
-    background-color: #1abc9c;
+    background-color: #A57142;
     color: white;
 }
 
@@ -111,16 +116,16 @@ nav ul li a:hover {
 
 .btn {
     padding: 10px 20px;
-    background-color: #1abc9c;
+    background-color: #A57142;
     color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 0%;
     font-weight: bold;
     transition: all 0.3s ease; /* Ajout d'une transition */
 }
 
 .btn:hover {
-    background-color: #16a085;
+    background-color: #A57142;
     transform: scale(1.05); /* Légère augmentation de la taille au hover */
 }
 
@@ -137,15 +142,15 @@ footer {
     color: white;
     text-align: center;
     padding: 20px 0;
-    border-top: 3px solid #1abc9c; /* Ligne de séparation en haut du footer */
+    border-top: 3px solid #A57142; /* Ligne de séparation en haut du footer */
 }
 
 /* Footer */
 footer {
-    background-color: #222;
+    background-color: #A57142;
     color: white;
     padding: 40px 0;
-    border-top: 3px solid #1abc9c;
+    border-top: 3px solid #A57142;
 }
 
 .footer-container {
@@ -164,7 +169,7 @@ footer {
 .footer-block h3 {
     font-size: 1.4em;
     margin-bottom: 10px;
-    color: #1abc9c;
+    color: #ffffff;
 }
 
 .footer-block p,
@@ -177,7 +182,7 @@ footer {
 }
 
 .footer-block a {
-    color: #1abc9c;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -207,7 +212,7 @@ footer {
 }
 
 .footer-links a {
-    color: #1abc9c;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -274,6 +279,25 @@ footer {
 .underline {
     width: 60px; /* Longueur de la petite barre sous le titre */
     height: 4px; /* Hauteur de la barre */
-    background-color: #1abc9c; /* Couleur de la barre */
+    background-color: #A57142; /* Couleur de la barre */
     margin: 0 auto 20px; /* Barre centrée, avec un espace en dessous */
+}
+/* Style pour la première image */
+.left-image {
+    float: left; /* Place l'image à gauche */
+    margin-right: 20px; /* Crée un espace entre l'image et le texte à droite */
+    margin-bottom: 20px; /* Ajoute de l'espace en bas de l'image */
+    width: 300px; /* Vous pouvez ajuster la largeur selon vos besoins */
+}
+
+/* Style pour la deuxième image */
+.right-image {
+    float: right; /* Place l'image à droite du texte */
+    margin-left: 20px; /* Crée un espace entre le texte et l'image à gauche */
+    margin-bottom: 20px; /* Ajoute de l'espace en bas de l'image */
+    width: 300px; /* Vous pouvez ajuster la largeur selon vos besoins */
+}
+
+.home-intro p {
+    text-align: justify; /* Aligne le texte pour qu'il s'écoule de manière uniforme autour des images */
 }
